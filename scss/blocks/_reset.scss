@@ -1,0 +1,25 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    position: relative;
+    font-family: 'e-Ukraine-Light';
+    /* font-size: normal; */
+    line-height: 1.2;
+    background-color: rgb(240, 240, 240);
+    color: black;
+    border: 2px solid blue;
+}

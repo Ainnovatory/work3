@@ -1,0 +1,166 @@
+@charset "UTF-8";
+/* @import "./blocks/reset";
+@import "./blocks/fonts";
+@import "./blocks/menu";
+@import "./blocks/main_site"; */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  position: relative;
+  font-family: "e-Ukraine-Light";
+  /* font-size: normal; */
+  line-height: 1.2;
+  background-color: rgb(240, 240, 240);
+  color: black;
+  border: 2px solid blue;
+}
+
+@font-face {
+  font-family: "e-Ukraine-Light";
+  src: url(../../fonts/e-Ukraine-Light.otf);
+  font-style: normal;
+}
+@font-face {
+  font-family: "e-Ukraine-Medium";
+  src: url(../../fonts/e-Ukraine-Medium.otf);
+  font-style: normal;
+}
+@font-face {
+  font-family: "e-Ukraine-Regular";
+  src: url(../../fonts/e-Ukraine-Regular.otf);
+  font-style: normal;
+}
+.header {
+  background-color: rgb(135, 180, 250);
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.wrapper {
+  max-width: 1200px;
+  min-width: 320px;
+  margin: 0 auto;
+  background-color: rgb(100, 155, 245);
+  padding-top: 7px;
+  padding-bottom: 15px;
+}
+
+.header__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 12px rgba(250, 243, 243, 0.972);
+  padding-left: 15px;
+}
+@media (min-width: 320px) and (max-width: 599.98px) {
+  .header__wrapper {
+    display: flex;
+    justify-content: center;
+  }
+  .header__wrapper .wrapper__logo-pic {
+    display: none;
+  }
+  .header__wrapper .wrapper__logo {
+    display: none;
+  }
+}
+
+.header__list-menu {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+@media (min-width: 320px) and (max-width: 599.98px) {
+  .header__list-menu {
+    display: flex;
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .header__list-menu .header__item {
+    margin-right: 0px;
+  }
+}
+.header__list-menu li {
+  display: inline-flex;
+}
+.header__list-menu li a {
+  display: block;
+  text-decoration: none;
+  position: relative;
+  color: whitesmoke;
+  padding: 5px 5px 5px 5px;
+  text-transform: uppercase;
+}
+.header__list-menu li a:active {
+  color: rgb(246, 10, 246);
+}
+.header__list-menu li a::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: rgb(246, 10, 246);
+  transition: 0.4s;
+}
+.header__list-menu li a:hover::before {
+  width: 100%;
+}
+
+/* Відступ меню */
+.header__item {
+  margin-right: 44px;
+}
+
+/* Обнуляємо правий зовнішній відступ у меню у останнього елемента */
+.header__item:last-child {
+  margin-right: 0px;
+}
+
+.header__link {
+  font-size: 18px;
+  line-height: 24px;
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+.main .wrapper {
+  background-color: rgb(255, 255, 255);
+}
+
+.intro {
+  min-height: 100vh;
+  /* border: 2px solid red; */
+  /* background: url("../../image/fon.png");
+  background-size: cover; */
+  padding-top: 15px;
+}
+
+.footer {
+  background: rgb(50, 50, 50);
+  padding: 10px 0;
+}
+
+.footer__logo-pic {
+  height: 150px;
+}/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,105 @@
+.header {
+    background-color: rgb(135, 180, 250);
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.wrapper {
+    max-width: 1200px;
+    min-width: 320px;
+    margin: 0 auto;
+    background-color: rgb(100, 155, 245);
+    padding-top: 7px;
+    padding-bottom: 15px;
+}
+
+.header__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 12px rgba(250, 243, 243, 0.972);
+    padding-left: 15px;
+    
+    @media (min-width: 320px) and (max-width: 599.98px) {
+        display: flex;
+        justify-content: center;
+
+        .wrapper__logo-pic {
+            display: none;
+        }
+        .wrapper__logo {
+            display: none;
+        }
+    }
+}
+
+.header__list-menu {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+
+    @media (min-width: 320px) and (max-width: 599.98px) {
+        
+        display: flex;
+        height: auto;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .header__item {
+            margin-right: 0px
+        }
+    }
+
+    li {
+        display: inline-flex;
+
+        a {
+            display: block;
+            text-decoration: none;
+            position: relative;
+            color: whitesmoke;
+            padding: 5px 5px 5px 5px;
+            text-transform: uppercase;
+        }
+
+        a:active {
+            color: rgb(246, 10, 246);
+        }
+
+        a::before {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: rgb(246, 10, 246);
+            transition: .4s;
+        }
+
+        a:hover::before {
+            width: 100%;
+        }
+    }
+}
+
+/* Відступ меню */
+.header__item {
+    margin-right: 44px;
+}
+
+/* Обнуляємо правий зовнішній відступ у меню у останнього елемента */
+.header__item:last-child {
+    margin-right: 0px;
+}
+
+.header__link {
+    font-size: 18px;
+    line-height: 24px;
+    color: whitesmoke;
+    text-decoration: none;
+}
